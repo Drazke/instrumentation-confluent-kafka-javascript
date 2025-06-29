@@ -1,9 +1,9 @@
 {
   "name": "@drazke/instrumentation-confluent-kafka-javascript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OpenTelemetry instrumentation for `confluent-kafka-javascript` messaging client for Apache Kafka",
-  "main": "build/src/index.js",
-  "types": "build/src/index.d.ts",
+  "main": "lib/src/index.js",
+  "types": "lib/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Drazke/instrumentation-confluent-kafka-javascript.git"
