@@ -38,13 +38,13 @@ import {
   MESSAGING_OPERATION_TYPE_VALUE_SEND,
   MESSAGING_SYSTEM_VALUE_KAFKA,
 } from "@opentelemetry/semantic-conventions/incubating";
-import { PACKAGE_NAME, PACKAGE_VERSION } from "./version";
+import { version, name } from "../package.json";
 
 export class ConfluentKafkaInstrumentation extends InstrumentationBase {
   protected declare _config: ConfluentKafkaInstrumentationConfig;
 
   constructor(config: ConfluentKafkaInstrumentationConfig = {}) {
-    super(PACKAGE_NAME, PACKAGE_VERSION, config);
+    super(name, version, config);
   }
 
   protected init():

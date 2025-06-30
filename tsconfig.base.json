@@ -20,7 +20,8 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "es2022"
+    "resolveJsonModule": true,
+    "target": "es2022",
   },
   "exclude": [
     "node_modules"
