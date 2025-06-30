@@ -26,7 +26,7 @@ npm install --save @drazke/instrumentation-confluent-kafka-javascript
 ```js
 const { NodeTracerProvider } = require('@opentelemetry/sdk-trace-node');
 const {
-  KafkaJsInstrumentation,
+  ConfluentKafkaInstrumentation,
 } = require('@drazke/instrumentation-confluent-kafka-javascript');
 const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 
