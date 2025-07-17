@@ -1,3 +1,14 @@
+### 0.2.0 (2025-07-17)
+
+##### Chores
+
+*  bump version ([2491515f](https://github.com/Drazke/instrumentation-confluent-kafka-javascript/commit/2491515f0af6a51a410361defd076737cd7565ee))
+*  add generate changelog ([24ffc56b](https://github.com/Drazke/instrumentation-confluent-kafka-javascript/commit/24ffc56b112c25ed71cd4687ad741c61c56e3357))
+
+##### Bug Fixes
+
+*  package module loading ([7cdca33b](https://github.com/Drazke/instrumentation-confluent-kafka-javascript/commit/7cdca33bd7e41c4bca023177918a1a658c9ee341))
+
 #### 0.1.3 (2025-06-30)
 
 ##### Chores
