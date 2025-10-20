@@ -233,9 +233,6 @@ export class ConfluentKafkaInstrumentation extends InstrumentationBase {
         opaque?: any,
         headers?: ConfluentKafka.MessageHeader[]
       ) {
-        if (!headers) {
-          headers = [];
-        }
         const span = self.tracer.startSpan(topic, {
           kind: SpanKind.PRODUCER,
           attributes: {
@@ -248,14 +245,13 @@ export class ConfluentKafkaInstrumentation extends InstrumentationBase {
             [ATTR_MESSAGING_OPERATION_NAME]: "produce",
             [ATTR_MESSAGING_OPERATION_TYPE]:
               MESSAGING_OPERATION_TYPE_VALUE_SEND,
-            [ATTR_MESSAGING_CLIENT_ID]: headers
+            [ATTR_MESSAGING_CLIENT_ID]: (headers ?? [])
               .find((h) => h.key === "client-id")
               ?.value?.toString(),
           },
         });
         const ctx = trace.setSpan(context.active(), span);
-        headers.push({});
-        propagation.inject(ctx, headers[headers.length - 1]);
+        propagation.inject(ctx, headers ? headers[headers.length - 1] : {});
         propagation.inject(ctx, opaque ?? {});
         if (self._config.producerHook) {
           self._config.producerHook(span, {
