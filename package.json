@@ -1,6 +1,6 @@
 {
   "name": "@drazke/instrumentation-confluent-kafka-javascript",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "OpenTelemetry instrumentation for `confluent-kafka-javascript` messaging client for Apache Kafka",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",
